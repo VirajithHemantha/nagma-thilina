@@ -66,21 +66,21 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
               className="absolute left-[4%] right-[4%] top-[4%] bottom-[4%] bg-white rounded-md shadow-[0_0_20px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center z-10 border border-[#f0e0d0]/50"
             >
               <h3 className="font-display italic text-3xl sm:text-4xl text-brand-gold-deep drop-shadow-sm px-6 text-center leading-relaxed">
-                We cordially invite
+                With pleasure, we invite you.
               </h3>
               <div className="w-12 h-[1px] bg-brand-gold/40 mt-6" />
             </motion.div>
 
             {/* Envelope Frame Body (Bottom Part of the Image) */}
             <div className="absolute inset-0 z-20 pointer-events-none drop-shadow-md">
-              <div 
+              <div
                 className="w-full h-full bg-[url('/envelope.png')] bg-contain bg-center bg-no-repeat"
                 style={{ clipPath: 'polygon(0 0, 50% 52%, 100% 0, 100% 100%, 0 100%)' }}
               />
             </div>
 
             {/* Top Flap Container (Animated) */}
-            <motion.div 
+            <motion.div
               className="absolute inset-0 z-40"
               style={{ transformOrigin: 'top', transformStyle: 'preserve-3d' }}
               initial={{ rotateX: 0 }}
@@ -88,32 +88,32 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
               transition={{ duration: 1.4, ease: [0.4, 0, 0.2, 1] }}
             >
               {/* Top Flap Front (Visible when closed) */}
-              <div 
+              <div
                 className="absolute inset-0 flex flex-col items-center drop-shadow-[0_6px_10px_rgba(0,0,0,0.15)]"
-                style={{ 
+                style={{
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden'
                 }}
               >
-                <div 
+                <div
                   className="w-full h-full bg-[url('/envelope.png')] bg-contain bg-center bg-no-repeat"
                   style={{ clipPath: 'polygon(0 0, 100% 0, 50% 52%)' }}
                 />
               </div>
 
               {/* Top Flap Back (Visible when open) */}
-              <div 
+              <div
                 className="absolute inset-0"
-                style={{ 
+                style={{
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden',
                   transform: 'rotateX(180deg)'
                 }}
               >
-                 <div 
-                   className="w-full h-full bg-[#e8d5c4] rounded-t-md"
-                   style={{ clipPath: 'polygon(0 0, 100% 0, 50% 52%)' }}
-                 />
+                <div
+                  className="w-full h-full bg-[#e8d5c4] rounded-t-md"
+                  style={{ clipPath: 'polygon(0 0, 100% 0, 50% 52%)' }}
+                />
               </div>
             </motion.div>
 
