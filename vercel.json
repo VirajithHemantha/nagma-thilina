@@ -1,0 +1,9 @@
+{
+  "buildCommand": "rm -rf node_modules && npm install && vite build",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
